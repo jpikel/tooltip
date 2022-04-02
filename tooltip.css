@@ -1,0 +1,98 @@
+/*== Worker: Tooltip */
+.il-tooltip {
+   position: absolute;
+   z-index: 9999;
+   max-width: 250px;
+   display: block;
+   margin: 0;
+   background-color: #6f6f6f;
+   color: #fff;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   padding: 2px 5px 2px 5px;
+   font-size: 12px;
+   line-break: auto;
+   word-wrap: break-word;
+}
+
+.il-tooltip.il-fade-out {
+   opacity: 0;
+   transition: opacity 0.3s linear;
+}
+
+.il-tooltip .il-tooltip-arrow {
+   position: relative;
+}
+
+.il-tooltip-arrow::before {
+   content: '';
+   position: absolute;
+}
+
+.il-bottom-left .il-tooltip-arrow::before,
+.il-bottom-right .il-tooltip-arrow::before,
+.il-top-right .il-tooltip-arrow::before,
+.il-top-left .il-tooltip-arrow::before {
+   border-top: 10px dashed #6f6f6f;
+   border-left: 10px solid transparent;
+}
+
+.il-bottom-left .il-tooltip-arrow::before {
+   top: -2px;
+   right: -5px;
+}
+
+.il-bottom-right .il-tooltip-arrow::before {
+   top: -2px;
+   left: -5px;
+   transform: rotate(-90deg);
+}
+
+.il-top-right .il-tooltip-arrow::before {
+   bottom: -2px;
+   left: -5px;
+   transform: rotate(180deg);
+}
+
+.il-top-left .il-tooltip-arrow::before {
+   bottom: -2px;
+   right: -5px;
+   transform: rotate(90deg);
+}
+
+.il-bottom .il-tooltip-arrow::before,
+.il-top .il-tooltip-arrow::before {
+   right: var(--tooltip-width, 50%);
+   border-top: 10px solid #6f6f6f;
+   border-left: 10px solid transparent;
+}
+
+.il-bottom .il-tooltip-arrow::before {
+   top: -7px;
+   transform: rotate(-45deg);
+}
+
+.il-top .il-tooltip-arrow::before {
+   bottom: -7px;
+   transform: rotate(135deg);
+}
+
+.il-left .il-tooltip-arrow::before,
+.il-right .il-tooltip-arrow::before {
+   border-top: 10px solid #6f6f6f;
+   border-left: 10px solid transparent;
+}
+
+.il-left .il-tooltip-arrow::before {
+   top: var(--tooltip-height, 15px);
+   right: -8px;
+   transform: rotate(45deg);
+}
+
+.il-right .il-tooltip-arrow::before {
+   top: var(--tooltip-height, 15px);
+   left: -8px;
+   transform: rotate(-135deg);
+}

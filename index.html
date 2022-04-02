@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="tooltip.css">
+      <script type="text/javascript" src="tooltip.js"></script>
+   </head>
+   <body>
+      <button style="position:absolute;top: 100px; left:400px;" id="top-left" title="test top tooltip really really really really really really really really really long">Top-Left</button>
+      <button style="position:absolute;top: 100px; left:500px;" id="top" title="test top tooltip really really really really really really really really really long">Top</button>
+      <button style="position:absolute;top: 100px; left:600px;" id="top-right" title="test top tooltip really really really really really really really really really long">Top-right</button>
+      <button style="position:absolute;top: 150px; left:600px;" id="right" title="test right tooltip">Right</button>
+      <button style="position:absolute;top: 200px; left:600px;" id="bottom-right" title="test right tooltip really really really really really really really really really long">Bottom-right</button>
+      <button style="position:absolute;top: 200px; left:500px;" id="bottom" title="test bottom tooltip really really really really really really really really really long">bottom</button>
+      <button style="position:absolute;top: 200px; left:400px;" id="bottom-left" title="test bottom tooltip">bottom-left</button>
+      <button style="position:absolute;top: 150px; left:400px;" id="left" title="test left tooltip really really really really really really really really really long">left</button>
+   </body>
+   <script>
+      IL.tooltip({
+         id: 'top-left',
+         placement: 'top-left'
+      });
+      IL.tooltip({
+         id: 'top',
+         placement: 'top'
+      });      
+      IL.tooltip({
+         id: 'top-right',
+         placement: 'top-right'
+      });
+      IL.tooltip({
+         id: 'left',
+         placement: 'left'
+      });
+      IL.tooltip({
+         id: 'right',
+         placement: 'right'
+      });
+      IL.tooltip({
+         id: 'bottom',
+         placement: 'bottom'
+      });
+      IL.tooltip({
+         id: 'bottom-right',
+         placement: 'bottom-right'
+      });
+      IL.tooltip({
+         id: 'bottom-left',
+         placement: 'bottom-left'
+      });
+   </script>
+</html>
